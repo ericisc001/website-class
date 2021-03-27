@@ -1,25 +1,132 @@
-<!DOCTYPE html> <!-- document type declaration  -->
-<html> <!-- html tag  -->
-    <head> <!-- head tag  -->
-        <title>Links Page</title> <!-- title tag  -->
-    </head>
-    <body> <!-- body tag  -->
-        <h1>Links Assignment</h1> <!-- h1 header -->
-        <br />
-        <a href="#FirstH2Header">Click here to visit first h2 header line.</a><br /><br /> <!-- internal link using id attribute -->
-        <a href="#SecondH2Header">Click here to visit second h2 header line.</a><br /><br /> <!-- internal link using id attribute -->
-        <a href="#ThirdH2Header">Click here to visit third h2 header line.</a><br /> <!-- internal link using id attribute -->
-        <p><a href="https://valenciacollege.edu/" target="_blank">Click here to visit Valencia.</a></p> <!-- external link -->
-        <br />
-        <h2 id="FirstH2Header">This is my first h2 header line!</h2> <!-- first h2 header line -->
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> <!-- for spacing -->
-        <h2 id="SecondH2Header">This is my second h2 header line!</h2> <!-- second h2 header line -->
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <h2 id="ThirdH2Header">This is my third h2 header line!</h2>  <!-- third h2 header line -->
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<!DOCTYPE html> <!-- document type -->
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive design -->
+    <link rel="stylesheet" href="style2.css"> <!-- External style sheet -->
+
+    <!-- Internal CSS -->
+    <style> 
+    
+    /* Make default text on page white */
+    body {
+     color: white;
+    }
+
+    /* CSS to make ToolTip*/
+    .tooltip {
+    position: relative;
+    display: inline-block;
+    
+    }
+
+    .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%;
+    }
+
+    .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+    }
+    .tooltip:hover .tooltiptext {
+    visibility: visible;
+    }
+
+    /* So I can scroll down further to see my background (personal preference)*/
+    body {
+    padding-bottom: 500px;
+    }
+    
+
+    </style>
+
+    <title>BIO Page</title> <!-- Page title -->
+
+</head>
+
+<body> <!-- Document body -->
+
+    
+
+    <h1>Eric Klausner's BIO Page</h1>
+
+    <!-- Navigation menu with drop-down menu. This will be my "Links Section" used for current, past assignments and links to Atlas and Canvas -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">Current Assignment 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="index.html">BIO Page</a>
+          </div>
+        </div> 
         
-    </body>
-</html>
+        <div class="dropdown">
+          <button class="dropbtn">Past Assignments
+            <i class-"fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="FirstPage.html">First Page</a>
+            <a href="FavoriteFood.html">Favorite Food Assignment</a>
+            <a href="LinksAssignment.html">Links Assignment</a>
+          </div>
+        </div>
+        
+        <a href="https://apps-eeipd-prd.valenciacollege.edu/cas/login?service=https%3A%2F%2Fatlas-ptlpd-prd.valenciacollege.edu%2Fc%2Fportal%2Flogin">Atlas</a>
+        <a href="https://apps-eeipd-prd.valenciacollege.edu/cas/login?service=https%3A%2F%2Fonline.valenciacollege.edu%2Flogin%2Fcas">Canvas</a>
+        
+      
+    </div>
+
+    <p><h3>Hi. My name's Eric. This is a page I'm setting up for my Website Development Class at Valencia College.</h3></p>
+
+    <p><h3>Links to my current and past assignments can be viewed using the dropdown links in the navigation menu at the top of the page. This page will be updated weekly.</h3></p>
+     
+    <!-- Paragraph with tooltip text when you hover over it -->
+    <p><div class="tooltip"><h3>Here is a picture of something I really love, my dog.</h3>
+      <span class="tooltiptext">Her name is Luna</span>
+    </div></p><br>
+    
+    <!-- Image -->
+    <img src="Luna1.JPG" width="120" height="180" alt="none">
+    
+    <!-- Changed color, font and font size for this paragraph -->
+    <p style="color:black;font-size:24px;font-family: 'Courier New', monospace;font-weight: bold;">Here are some more pictures and a video of my dog.</p><br>
+    
+    <!-- More images resized but maintain original aspect ratio -->
+    <img src="Luna2.JPG" width="135" height="180" alt="none">
+    <img src="Luna3.JPEG" width="135" height="180" alt="none">
+    <img src="Luna4.JPG" width="320" height="180" alt="none">
+    
+    <!-- Video with controls, custom aspect ratio that fits container-->
+    <video style="height: 180px; width: 135px; object-fit: cover;" controls> 
+      <source src="Luna5.MP4" type="video/mp4">
+    </video>
+
+
+    <!-- My email link -->
+    <p><h3>If you have any questions or comments, please feel free to <a href="mailto:eklausner@mail.valenciacollege.edu" style="color:white">email me.</h3></p>
+    
+    
+
+</body> <!-- End of document body -->
+
+</html> <!-- End of document -->
