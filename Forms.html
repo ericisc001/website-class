@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+form {
+  background-color: #FFC;
+  width: 25%
+} 
+
+form {
+  padding: 0px; 
+  padding-top: 0px;
+  border-radius: 4px; 
+  border: 2px solid rgb(250, 189, 132);
+}
+
+.div1 {
+    background: orange;
+    color: white;
+    padding: 0px;
+    height: 30px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.center {
+
+display: block;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+
+
+</style>
+
+<title>Forms</title>
+
+</head>
+
+<body>
+
+   
+ 
+    
+    <form>
+        <div class="div1">
+        <label for="formTitle">User Input Form</label>
+        </div><br><br>
+        <img src="logo2.png" alt="none" class="center"><br><br>
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" value=""><br><br>
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" value=""><br><br>
+        <label>Select Gender:</label><br><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+        <label>Select Color:</label><br><br>
+        <input type="checkbox" id="red" name="color" value="red">
+        <label for="red">Red</label><br>
+        <input type="checkbox" id="white" name="color" value="white">
+        <label for="white">White</label><br>
+        <input type="checkbox" id="blue" name="color" value="blue">
+        <label for="blue">Blue</label><br><br>
+        <label for="sport">Select Your Sport:</label><br><br>
+        <select name="sport">
+            <option value="sport1">Football</option>
+            <option value="sport2">Baseball</option>
+            <option value="sport3">Soccer</option>
+            <option value="sport4">Hockey</option>
+            <option value="sport5">Basketball</option>
+            <option value="sport6">Volleyball</option>
+            <option value="sport7">Tennis</option>
+            <option value="sport8">Archery</option>
+            <option value="sport9">Golf</option>
+            <option value="sport10">Sailing</option>
+        </select><br><br>
+        <label for="globalWarming">What are your thoughts on global warming?</label><br><br>
+        <textarea rows="20" cols="50">
+        </textarea><br><br>
+        <label for="pass">Please Enter Password (Maximum 10 Characters):</label><br><br>
+        <input type="password" id="pass" name="password" maxlength="10" required><br><br>
+        <label for="myFile">Please Upload File:</label><br><br>
+        <input type="file" id="myFile" name="filename"><br><br>
+        <input type="button" value="Submit">
+    </form> 
+
+
+
+</body>
+
+</html>
