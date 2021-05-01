@@ -1,12 +1,18 @@
 /* My external CSS style sheet */
 
+/* remove default whitespace between elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 
 /* Defaults background color */
 
 body {
-  background-color: #222
+  background-color: #222;
+  
 }
-
 
 /* CSS for my Links Section / Navigation Menu */
 
@@ -15,10 +21,21 @@ body {
   background-color: rgb(59, 58, 58);
 }
 
+
+.nav2, .nav3, .nav4, .nav5 {
+  color: white;
+}
+
 /*dark mode for navbar*/
 .nav-dark {
   background-color: steelblue;
 }
+
+/*dark mode for bio nav links*/
+.nav2-dark, .nav3-dark, .nav4-dark, .nav5-dark {
+  color: black;
+}
+
 
 .navbar a {
   float: left;
@@ -113,6 +130,7 @@ body {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 15px;
+  
 }
 
 .pics {
@@ -145,6 +163,7 @@ a {
 {
     display:inline;
 }
+
 
 
 /* The switch - the box around the slider */
@@ -233,7 +252,6 @@ footer {
   width: 50%;
   text-align: center;
 }
-
 
 
 
