@@ -1,38 +1,38 @@
 <!DOCTYPE html> <!-- document type -->
 
-<html>
+<html lang="en">
+
 
 <head>
+    <meta charset="utf-8" /> <!-- define character set -->
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive design -->
-    <link rel="stylesheet" href="style2.css"> <!-- External style sheet -->
+    <link rel="stylesheet" href="main.css"> <!-- External style sheet -->
+    <title>BIO Page</title> <!-- Page title -->
 
     <!-- Internal CSS -->
     <style> 
-    
-    /* Make default text on page white */
-    body {
-     color: white;
-    }
+   
 
     /* CSS to make ToolTip*/
     .tooltip {
     position: relative;
-    display: inline-block;
-    
+    margin: auto;
+    width: 50%;
+    text-align:center;
     }
 
     .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: black;
-    color: #fff;
+    color: white;
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
     position: absolute;
     z-index: 1;
     top: -5px;
-    left: 110%;
+    left: 100%;
     }
 
     .tooltip .tooltiptext::after {
@@ -51,97 +51,139 @@
 
     .video-iframe {
 
-height:100vh;
+    height:100vh;
 
-width:100vw;
+    width:100vw;
 
-}
-
-    /* So I can scroll down further to see my background (personal preference)*/
-    body {
-    padding-bottom: 500px;
     }
+
+    /*default body styling */
+    body {
+    
+    font-size:24px;font-family: 'Courier New';font-weight: bold;
+    color: white;
+    }
+    
     
 
     </style>
 
-    <title>BIO Page</title> <!-- Page title -->
 
 </head>
 
 <body> <!-- Document body -->
 
-    
-
-    <h1>Eric Klausner's BIO Page</h1>
-
+    <header>
     <!-- Navigation menu with drop-down menu. This will be my "Links Section" used for current, past assignments and links to Atlas and Canvas -->
+    <nav>
     <div class="navbar">
         <a href="index.html">Home</a>
         <div class="dropdown">
-          <button class="dropbtn">Current Assignment 
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="JavaScript.html">JavaScript Assignment</a>
-          </div>
-        </div> 
-        
-        <div class="dropdown">
-          <button class="dropbtn">Past Assignments
+          <button style="font-weight: bold;" class="dropbtn">Past Assignments
             <i class-"fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="FirstPage.html">First Page</a>
-            <a href="FavoriteFood.html">Favorite Food Assignment</a>
-            <a href="LinksAssignment.html">Links Assignment</a>
-            <a href="Tables.html">Tables Assignment</a>
-            <a href="Forms.html">Forms Assignment</a>
+            <a href="/past assignments/FirstPage.html">First Page</a>
+            <a href="/past assignments/FavoriteFood.html">Favorite Food Assignment</a>
+            <a href="/past assignments/LinksAssignment.html">Links Assignment</a>
+            <a href="/past assignments/Tables.html">Tables Assignment</a>
+            <a href="/past assignments/Forms.html">Forms Assignment</a>
           </div>
         </div>
+        <div class="dropdown">
+          <button style="font-weight: bold;" class="dropbtn">Current Assignment 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="/current assignment/JavaScript.html">JavaScript Assignment</a>
+          </div>
+        </div> 
+        
+        
         
         <a href="https://atlas-ptlpd-prd.valenciacollege.edu/">Atlas</a>
         <a href="https://online.valenciacollege.edu">Canvas</a>
+        <a href="mailto:eklausner@mail.valenciacollege.edu">Contact</a> <!-- New email link -->
+        
         
       
     </div>
+    </nav>
+    </header>
 
-    <p><h3>Hi. My name's Eric. This is a page I'm setting up for my Website Development Class at Valencia College.</h3></p>
+    
+    <div style="text-align:right;" id="mode">DARK MODE</div>
 
-    <p><h3>Links to my current and past assignments can be viewed using the dropdown links in the navigation menu at the top of the page. This page will be updated weekly.</h3></p>
-     
+    
+    <div class="button">
+    <label class="switch">
+      <input type="checkbox" onchange="myFunction()">
+      <span class="slider round"></span>
+    </label>
+    </div>
+    
+   
+    
+    <div class="intro">
+    <h3>Hi. My name is Eric. This is a page I made for my Website Development Class at Valencia College.<br><br> My current and past assignments can be viewed using the dropdown links in the navigation menu at the top of the page. This page will be updated weekly until the end of my class.</h3>
+    </div>
+
+    
+
+
+    <div class="bio">
+    <img src="/pics/profile2.jpg" alt="none" style="border-radius: 50%;"> <!-- rounded image -->
+    <p>Eric Klausner<br><span style="font-size: 14pt;">Student and Aspiring Developer</span><br>
+    <span style="font-size: 14pt;">HTML5, CSS3, JavaScript, Python, Java</span><br>
+    <a href="https://github.com/ericisc001">
+      <img src="/pics/github.png" alt="none" style="border-radius: 5px 5px 5px 5px";>
+    </a>
+    <a href="https://twitter.com/egk84">
+      <img src="/pics/twitter.png" alt="none">
+    </a>
+
+
+    </p>
+    </div>
+    
+    
     <!-- Paragraph with tooltip text when you hover over it -->
-    <p><div class="tooltip"><h3>Here is a picture of something I really love, my dog.</h3>
-      <span class="tooltiptext">Her name is Luna</span>
-    </div></p><br>
+    <div class="pics">
+      <p><div class="tooltip">Here are some pictures and a video of my dog. Enjoy!</p><br>
+        <span class="tooltiptext">Her Name is Luna</span></div>
+    </div>
     
-    <!-- Image -->
-    <img src="https://github.com/ericisc001/website-class/blob/main/pics/Luna1.JPG?raw=true" width="120" height="180" alt="none">
+    <!-- More images and videos -->
+    <div class="container">
+    <div class="vids">
+    <img src="/pics/Luna1.JPG" width="200" height="267" alt="none">
+    <img src="/pics/Luna2.JPG" width="200" height="267" alt="none">
+    <img src="/pics/Luna3.JPEG" width="200" height="267" alt="none"><br>
     
-    <!-- Changed color, font and font size for this paragraph -->
-    <p style="color:black;font-size:24px;font-family: 'Courier New', monospace;font-weight: bold;">Here are some more pictures and a video of my dog.</p><br>
+    <img src="/pics/LUNA6.JPEG" width="200" height="267" alt="none">
+    <img src="/pics/LUNA8.JPEG" width="200" height="267" alt="none">
     
-    <!-- More images resized but maintain original aspect ratio -->
-    <img src="https://github.com/ericisc001/website-class/blob/main/pics/Luna2.JPG?raw=true" width="135" height="180" alt="none">
-    <img src="https://github.com/ericisc001/website-class/blob/main/pics/Luna3.JPEG?raw=true" width="135" height="180" alt="none">
-    <img src="https://github.com/ericisc001/website-class/blob/main/pics/Luna4.JPG?raw=true" width="320" height="180" alt="none">
-    
-    <!-- Video with controls, custom aspect ratio that fits container-->
-    <video style="height: 180px; width: 135px; object-fit: cover;" controls> 
+    <!-- Video with player and controls -->
+    <video style="height: 267px; width: 200px; object-fit: cover;" controls> 
       <source src="pics/Luna5.MP4" type="video/mp4">
-    </video><br>
+    </video></div>
+    
+    </div>
+    
+    <br><br><br><br>
+   
+    <footer>
+      
+    <p>Copyright <span id="copyright-year">2021</span>. All Rights Reserved.</p>
+    
+    </footer>
 
-    <img src="https://github.com/ericisc001/website-class/blob/main/pics/LUNA6.JPEG?raw=true" width="135" height="180" alt="none">
-    <img src="https://github.com/ericisc001/website-class/blob/main/pics/LUNA7.JPEG?raw=true" width="135" height="180" alt="none">
-    <img src="https://github.com/ericisc001/website-class/blob/main/pics/LUNA8.JPEG?raw=true" width="135" height="180" alt="none">
-    
-    
-    
-    <!-- My email link -->
-    <p><h3>If you have any questions or comments, please feel free to <a href="mailto:eklausner@mail.valenciacollege.edu" style="color:white">email me.</h3></p>
-    
-    
+<script src="/scripts/main.js"></script> <!-- External JavaScript File -->
+<script> <!-- Auto update year -->
+  document.querySelector('#copyright-year').innerText = new Date().getFullYear();
+</script>
 
 </body> <!-- End of document body -->
+
 
 </html> <!-- End of document -->
